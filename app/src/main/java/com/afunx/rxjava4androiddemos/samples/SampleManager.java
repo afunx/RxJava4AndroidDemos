@@ -3,9 +3,12 @@ package com.afunx.rxjava4androiddemos.samples;
 import android.util.Log;
 
 import com.afunx.rxjava4androiddemos.samples.observable.Creating.Create;
+import com.afunx.rxjava4androiddemos.samples.observable.Creating.Defer;
 
 /**
  * Created by afunx on 21/10/2017.
+ * <p>
+ * SampleManager manage all samples
  */
 
 public class SampleManager {
@@ -32,6 +35,7 @@ public class SampleManager {
     private void testCreating() {
         Log.d(TAG, "test observable.Creating");
         testCreate();
+        testDefer();
     }
 
     private void testCreate() {
@@ -39,7 +43,16 @@ public class SampleManager {
         Create.get().test0();
         Create.get().test1();
         Create.get().test2();
+        Create.get().test3();
+        Create.get().test4();
     }
+
+    private void testDefer() {
+        Log.d(TAG, "test observable.Creating.Defer");
+        Defer.get().test0();
+        Defer.get().test1();
+    }
+
 
     private static class SingletonHolder {
         private static final SampleManager INSTANCE = new SampleManager();
