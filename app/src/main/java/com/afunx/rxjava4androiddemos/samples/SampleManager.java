@@ -5,6 +5,7 @@ import android.util.Log;
 import com.afunx.rxjava4androiddemos.samples.observable.Creating.Create;
 import com.afunx.rxjava4androiddemos.samples.observable.Creating.Defer;
 import com.afunx.rxjava4androiddemos.samples.observable.Creating.Empty;
+import com.afunx.rxjava4androiddemos.samples.observable.Creating.Never;
 
 /**
  * Created by afunx on 21/10/2017.
@@ -38,6 +39,7 @@ public class SampleManager {
         testCreate();
         testDefer();
         testEmpty();
+        testNever();
     }
 
     private void testCreate() {
@@ -58,6 +60,11 @@ public class SampleManager {
     private void testEmpty() {
         Log.d(TAG, "test observable.Creating.Empty");
         Empty.get().test0();
+    }
+
+    private void testNever() {
+        Log.d(TAG, "test observable.Creating.Never");
+        Never.get().test0();
     }
 
     private static class SingletonHolder {
