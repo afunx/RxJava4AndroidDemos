@@ -33,12 +33,12 @@ public class Empty extends BaseSample {
                 .subscribe(new Consumer() {
                     @Override
                     public void accept(Object o) throws Exception {
-
+                        Log.d(TAG, "Consumer<String> accept() o: " + o);
                     }
                 }, new Consumer<Throwable>() {
                     @Override
                     public void accept(Throwable throwable) throws Exception {
-
+                        Log.d(TAG, "Consumer<Throwable> accept() throwable: " + throwable);
                     }
                 }, new Action() {
                     @Override
