@@ -7,6 +7,7 @@ import com.afunx.rxjava4androiddemos.samples.observable.Creating.Defer;
 import com.afunx.rxjava4androiddemos.samples.observable.Creating.Empty;
 import com.afunx.rxjava4androiddemos.samples.observable.Creating.Error;
 import com.afunx.rxjava4androiddemos.samples.observable.Creating.From;
+import com.afunx.rxjava4androiddemos.samples.observable.Creating.Interval;
 import com.afunx.rxjava4androiddemos.samples.observable.Creating.Just;
 import com.afunx.rxjava4androiddemos.samples.observable.Creating.Never;
 
@@ -46,6 +47,7 @@ public class SampleManager {
         testError();
         testFrom();
         testJust();
+        testInterval();
     }
 
     private void testCreate() {
@@ -88,6 +90,10 @@ public class SampleManager {
         Just.get().test0();
     }
 
+    private void testInterval() {
+        Log.d(TAG, "test observable.Creating.Interval");
+        Interval.get().test0();
+    }
 
     private static class SingletonHolder {
         private static final SampleManager INSTANCE = new SampleManager();
