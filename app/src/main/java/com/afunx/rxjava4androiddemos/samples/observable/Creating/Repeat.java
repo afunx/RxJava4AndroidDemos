@@ -5,11 +5,8 @@ import android.util.Log;
 import com.afunx.rxjava4androiddemos.samples.BaseSample;
 
 import io.reactivex.Observable;
-import io.reactivex.ObservableSource;
-import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
-import io.reactivex.functions.Function;
 
 /**
  * Created by afunx on 27/10/2017.
