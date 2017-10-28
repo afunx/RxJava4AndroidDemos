@@ -107,6 +107,7 @@ public class SampleManager {
     private void testRepeat() {
         Log.d(TAG, "test observable.Creating.Repeat");
         Repeat.get().test0();
+        Repeat.get().test1();
     }
 
     private static class SingletonHolder {
