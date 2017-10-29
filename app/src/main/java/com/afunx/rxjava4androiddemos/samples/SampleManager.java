@@ -12,6 +12,7 @@ import com.afunx.rxjava4androiddemos.samples.observable.Creating.Just;
 import com.afunx.rxjava4androiddemos.samples.observable.Creating.Never;
 import com.afunx.rxjava4androiddemos.samples.observable.Creating.Range;
 import com.afunx.rxjava4androiddemos.samples.observable.Creating.Repeat;
+import com.afunx.rxjava4androiddemos.samples.observable.Creating.Timer;
 
 /**
  * Created by afunx on 21/10/2017.
@@ -52,6 +53,7 @@ public class SampleManager {
         testInterval();
         testRange();
         testRepeat();
+        testTimer();
     }
 
     private void testCreate() {
@@ -108,6 +110,11 @@ public class SampleManager {
         Log.d(TAG, "test observable.Creating.Repeat");
         Repeat.get().test0();
         Repeat.get().test1();
+    }
+
+    private void testTimer() {
+        Log.d(TAG, "test observable.Creating.Timer");
+        Timer.get().test0();
     }
 
     private static class SingletonHolder {
