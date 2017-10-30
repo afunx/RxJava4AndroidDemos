@@ -31,7 +31,7 @@ public class Timer extends BaseSample {
     @Override
     public void test0() {
         Log.i(TAG, "test0() Timer simple demo, delay 1 second");
-        final Disposable disposable = Observable.timer(1, TimeUnit.SECONDS).subscribe(new Consumer<Long>() {
+        Observable.timer(1, TimeUnit.SECONDS).subscribe(new Consumer<Long>() {
             @Override
             public void accept(Long l) throws Exception {
                 Log.d(TAG, "Consumer<Long> accept() l: " + l);
@@ -47,6 +47,13 @@ public class Timer extends BaseSample {
                 Log.d(TAG, "Action run() for onComplete()");
             }
         });
+        Log.d(TAG, "test0() sleeping");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Log.d(TAG, "test0() sleep");
     }
 
     private static class SingletonHolder {
