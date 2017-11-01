@@ -15,6 +15,7 @@ import com.afunx.rxjava4androiddemos.samples.observable.Creating.Repeat;
 import com.afunx.rxjava4androiddemos.samples.observable.Creating.Timer;
 import com.afunx.rxjava4androiddemos.samples.observable.Transforming.Buffer;
 import com.afunx.rxjava4androiddemos.samples.observable.Transforming.FlatMap;
+import com.afunx.rxjava4androiddemos.samples.observable.Transforming.GroupBy;
 
 /**
  * Created by afunx on 21/10/2017.
@@ -124,6 +125,7 @@ public class SampleManager {
         Log.d(TAG, "test observable.Transforming");
         testBuffer();
         testFlatMap();
+        testGroupBy();
     }
 
     private void testBuffer() {
@@ -134,6 +136,11 @@ public class SampleManager {
     private void testFlatMap() {
         Log.d(TAG, "test observable.Transforming.FlatMap");
         FlatMap.get().test0();
+    }
+
+    private void testGroupBy() {
+        Log.d(TAG, "test observable.Transforming.GroupBy");
+        GroupBy.get().test0();
     }
 
     private static class SingletonHolder {
