@@ -17,6 +17,7 @@ import com.afunx.rxjava4androiddemos.samples.observable.Transforming.Buffer;
 import com.afunx.rxjava4androiddemos.samples.observable.Transforming.FlatMap;
 import com.afunx.rxjava4androiddemos.samples.observable.Transforming.GroupBy;
 import com.afunx.rxjava4androiddemos.samples.observable.Transforming.Map;
+import com.afunx.rxjava4androiddemos.samples.observable.Transforming.Scan;
 
 /**
  * Created by afunx on 21/10/2017.
@@ -128,6 +129,7 @@ public class SampleManager {
         testFlatMap();
         testGroupBy();
         testMap();
+        testScan();
     }
 
     private void testBuffer() {
@@ -148,6 +150,11 @@ public class SampleManager {
     private void testMap() {
         Log.d(TAG, "test observable.Transforming.Map");
         Map.get().test0();
+    }
+
+    private void testScan() {
+        Log.d(TAG, "test observable.Transforming.Scan");
+        Scan.get().test0();
     }
 
 
