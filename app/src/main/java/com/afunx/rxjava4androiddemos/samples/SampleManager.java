@@ -18,6 +18,7 @@ import com.afunx.rxjava4androiddemos.samples.observable.Transforming.FlatMap;
 import com.afunx.rxjava4androiddemos.samples.observable.Transforming.GroupBy;
 import com.afunx.rxjava4androiddemos.samples.observable.Transforming.Map;
 import com.afunx.rxjava4androiddemos.samples.observable.Transforming.Scan;
+import com.afunx.rxjava4androiddemos.samples.observable.Transforming.Window;
 
 /**
  * Created by afunx on 21/10/2017.
@@ -130,6 +131,7 @@ public class SampleManager {
         testGroupBy();
         testMap();
         testScan();
+        testWindow();
     }
 
     private void testBuffer() {
@@ -157,6 +159,11 @@ public class SampleManager {
         Scan.get().test0();
     }
 
+    private void testWindow() {
+        Log.d(TAG, "test observable.Transforming.Window");
+        Window.get().test0();
+        Window.get().test1();
+    }
 
     private static class SingletonHolder {
         private static final SampleManager INSTANCE = new SampleManager();
