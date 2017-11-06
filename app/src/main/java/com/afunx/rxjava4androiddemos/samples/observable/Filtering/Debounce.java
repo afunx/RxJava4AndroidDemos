@@ -30,7 +30,7 @@ public class Debounce extends BaseSample {
 
     @Override
     public void test0() {
-        Log.i(TAG, "test0() Debounce simple demo, interval(100, TimeUnit.MILLISECONDS).debounde(100, TimeUnit.MILLISECONDS)");
+        Log.i(TAG, "test0() Debounce simple demo, interval(100, TimeUnit.MILLISECONDS).debounce(100, TimeUnit.MILLISECONDS)");
         Disposable disposable = Observable.interval(100, TimeUnit.MILLISECONDS)
                 .debounce(100, TimeUnit.MILLISECONDS)
                 .subscribe(new Consumer<Long>() {
