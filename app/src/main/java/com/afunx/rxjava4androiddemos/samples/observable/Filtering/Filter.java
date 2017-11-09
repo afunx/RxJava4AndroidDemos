@@ -29,7 +29,7 @@ public class Filter extends BaseSample {
 
     @Override
     public void test0() {
-        Log.i(TAG, "test0() ElementAt Filter demo, 1, 2, 3, 4, 5 filter is integer%2==0");
+        Log.i(TAG, "test0() Filter demo, 1, 2, 3, 4, 5 filter is integer%2==0");
         Observable.just(1,2,3,4,5).filter(new Predicate<Integer>() {
             @Override
             public boolean test(@NonNull Integer integer) throws Exception {

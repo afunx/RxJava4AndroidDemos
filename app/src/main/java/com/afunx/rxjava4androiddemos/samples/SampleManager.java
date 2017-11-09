@@ -17,6 +17,7 @@ import com.afunx.rxjava4androiddemos.samples.observable.Filtering.Debounce;
 import com.afunx.rxjava4androiddemos.samples.observable.Filtering.Distinct;
 import com.afunx.rxjava4androiddemos.samples.observable.Filtering.ElementAt;
 import com.afunx.rxjava4androiddemos.samples.observable.Filtering.Filter;
+import com.afunx.rxjava4androiddemos.samples.observable.Filtering.First;
 import com.afunx.rxjava4androiddemos.samples.observable.Transforming.Buffer;
 import com.afunx.rxjava4androiddemos.samples.observable.Transforming.FlatMap;
 import com.afunx.rxjava4androiddemos.samples.observable.Transforming.GroupBy;
@@ -176,6 +177,7 @@ public class SampleManager {
         testDistinct();
         testElementAt();
         testFilter();
+        testFirst();
     }
 
     private void testDebounce() {
@@ -197,6 +199,11 @@ public class SampleManager {
     private void testFilter() {
         Log.d(TAG, "test observable.Filtering.Filter");
         Filter.get().test0();
+    }
+
+    private void testFirst() {
+        Log.d(TAG, "test observable.Filtering.First");
+        First.get().test0();
     }
 
     private static class SingletonHolder {
