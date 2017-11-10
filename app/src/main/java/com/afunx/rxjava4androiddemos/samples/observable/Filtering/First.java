@@ -33,18 +33,18 @@ public class First extends BaseSample {
         Observable.just(1, 2, 3, 4, 5)
                 .first(-1)
                 .subscribe(new Consumer<Integer>() {
-                               @Override
-                               public void accept(Integer i) throws Exception {
-                                   Log.d(TAG, "Consumer<String> accept() i: " + i);
-                               }
-                           }
-                        , new Consumer<Throwable>() {
-                            @Override
-                            public void accept(Throwable throwable) throws Exception {
-                                Log.d(TAG, "Consumer<Throwable> accept() throwable: " + throwable);
-                            }
-                        });
+        @Override
+        public void accept(Integer i) throws Exception {
+            Log.d(TAG, "Consumer<String> accept() i: " + i);
+        }
     }
+                        , new Consumer<Throwable>() {
+        @Override
+        public void accept(Throwable throwable) throws Exception {
+            Log.d(TAG, "Consumer<Throwable> accept() throwable: " + throwable);
+        }
+    });
+}
 
     private static class SingletonHolder {
         private static final First INSTANCE = new First();
