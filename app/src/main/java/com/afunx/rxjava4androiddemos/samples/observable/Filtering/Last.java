@@ -32,7 +32,7 @@ public class Last extends BaseSample {
                 .subscribe(new Consumer<Integer>() {
         @Override
         public void accept(Integer i) throws Exception {
-            Log.d(TAG, "Consumer<String> accept() i: " + i);
+            Log.d(TAG, "Consumer<Integer> accept() i: " + i);
         }
     }
                         , new Consumer<Throwable>() {
