@@ -5,6 +5,7 @@ import android.util.Log;
 import com.afunx.rxjava4androiddemos.samples.BaseSample;
 
 import io.reactivex.Observable;
+import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
 
 /**
@@ -33,6 +34,16 @@ public class Skip extends BaseSample {
                     @Override
                     public void accept(Integer i) throws Exception {
                         Log.d(TAG, "Consumer<Integer> accept() i: " + i);
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) throws Exception {
+                        Log.d(TAG, "Consumer<Throwable> accept() throwable: " + throwable);
+                    }
+                }, new Action() {
+                    @Override
+                    public void run() throws Exception {
+                        Log.d(TAG, "Action run() for onComplete()");
                     }
                 });
     }
